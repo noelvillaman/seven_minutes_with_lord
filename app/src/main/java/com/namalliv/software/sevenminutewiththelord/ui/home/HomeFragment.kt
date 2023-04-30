@@ -17,6 +17,7 @@ import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment() {
 
+    private var index: Int = 0
     private var _binding: FragmentHomeBinding? = null
 
     // This property is only valid between onCreateView and
@@ -24,6 +25,7 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
     //private val letrasVewModel: LetrasViewModel by viewModels()
     private val homeViewModel: HomeViewModel by viewModels()
+    private val callings = listOf("O, Lord", "O, Lord Jesus", "Lord Jesus", "Amen, Lord Jesus")
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -67,7 +69,15 @@ class HomeFragment : Fragment() {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED){
                 homeViewModel.progressFlow().collectLatest {
                     val precentage = (it.toDouble()/30)* 100
-                    binding.progressBar.progress = precentage.toInt()
+                    binding.pbMainBar.progress = precentage.toInt()
+                    binding.tvProgressbarValue.text = "$it"
+                    if (it % 9 == 0){
+                        binding.textHome.text = callings[index + 1]
+                        index++
+                    }
+                    if (it == 30){
+                        binding.textHome.text = "You can now move to the next minute: confessing"
+                    }
                     println(it)
                 }
             }
