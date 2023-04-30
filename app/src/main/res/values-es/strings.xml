@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">7 Minutos con el Señor</string>
+    <string name="action_settings">Configuración</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Fragmento Uno</string>
+    <string name="second_fragment_label">Fragmento dos</string>
+    <string name="next">Proximo</string>
+    <string name="previous">Anterior</string>
+
+    <string name="hello_first_fragment">Hola primer fragmento</string>
+    <string name="hello_second_fragment">Hola second fragmento. Arg: %1$s</string>
+    <string name="title_activity_dashboard">TableroActivity</string>
+    <string name="title_home">Inicio</string>
+    <string name="title_dashboard">Tablero</string>
+    <string name="title_notifications">Notificaciones</string>
+    <string name="title_esta">Yo estoy aquí</string>
+    <string name="i_am_here">Yo estoy aquí mi titulo</string>
+    <string name="textview">Vista de texto</string>
+    <string name="message_dashboard">Este es el Fragmento del tablero con Noel villaman adelante</string>
+    <string name="message_home">Este es el Fragmento del inicio con Noel villaman adelante</string>
+</resources>

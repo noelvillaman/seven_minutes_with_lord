@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.namalliv.software.sevenminutewiththelord.FirstFragment"
+        android:name="com.namalliv.software.sevenminutewiththelord.ui.intro.IntroFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/fragment_intro">
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
@@ -17,12 +17,19 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.namalliv.software.sevenminutewiththelord.SecondFragment"
+        android:name="com.namalliv.software.sevenminutewiththelord.ui.inicio.MainFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        tools:layout="@layout/fragment_main">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_dashboardActivity"
+            app:destination="@id/dashboardActivity" />
     </fragment>
+    <activity
+        android:id="@+id/dashboardActivity"
+        android:name="com.namalliv.software.sevenminutewiththelord.DashboardActivity"
+        android:label="DashboardActivity" />
 </navigation>
